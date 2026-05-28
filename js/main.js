@@ -1004,7 +1004,14 @@ function applyLang(lang) {
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (dict[key] !== undefined) el.textContent = dict[key];
+        if (dict[key] !== undefined) {
+            const inner = el.querySelector('.contact-title-inner');
+            if (inner) {
+                inner.textContent = dict[key];
+            } else {
+                el.textContent = dict[key];
+            }
+        }
     });
     document.querySelectorAll('[data-i18n-scramble]').forEach(el => {
         const key = el.getAttribute('data-i18n-scramble');

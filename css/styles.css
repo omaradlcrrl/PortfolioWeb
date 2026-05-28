@@ -1528,6 +1528,8 @@ section {
 .contact-line {
     display: block;
     overflow: hidden;
+    padding-bottom: 0.15em;
+    margin-bottom: -0.15em;
 }
 
 .contact-body {
