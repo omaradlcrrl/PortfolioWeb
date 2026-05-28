@@ -1,6 +1,7 @@
 # IDEs and Editors
 .idea/
 .vscode/
+.claude/
 *.suo
 *.ntvs*
 *.njsproj
