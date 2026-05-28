@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Adel Corral | Full Stack & Mobile Developer</title>
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Portfolio de Omar Adel Corral - Desarrollador Full Stack & Mobile especializado en el ecosistema Java, Spring Boot y Kotlin, diseñando APIs RESTful robustas e interfaces de alta fluidez.">
+    <meta name="keywords" content="Portfolio, Full Stack, Mobile Developer, Java, Spring Boot, Kotlin, Ktor, GSAP, Web Design, Interactive Web, Madrid">
+    <meta name="author" content="Omar Adel Corral">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css?v=5.0">
+</head>
+<body style="background-color: #07070a;" class="intro-active">
+    <!-- PANTALLA DE CARGA HOLOGRÁFICA / PRELOADER -->
+    <div id="preloader" style="background-color: #07070a;">
+        <div class="preloader-curtain top"></div>
+        <div class="preloader-curtain bottom"></div>
+        <div class="preloader-content">
+            <!-- CAD Blueprint Viewport de Fondo -->
+            <div class="blueprint-viewport">
+                <div class="blueprint-line line-x"></div>
+                <div class="blueprint-line line-y"></div>
+                <div class="blueprint-box"></div>
+                <div class="blueprint-spec spec-top-left" style="top: 10px; left: 10px;">SYS.LOC: MADRID</div>
+                <div class="blueprint-spec spec-top-right" style="top: 10px; right: 10px;">SCALE: 1:1</div>
+                <div class="blueprint-spec spec-bot-left" style="bottom: 10px; left: 10px;">SEC.LEVEL: MAX</div>
+                <div class="blueprint-spec spec-bot-right" style="bottom: 10px; right: 10px;">VER: 4.8</div>
+            </div>
+
+            <!-- Monograma Vectorial Autodibujable -->
+            <svg class="oa-monogram" viewBox="0 0 100 100">
+                <defs>
+                    <linearGradient id="monogram-grad-preloader" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#00f2fe" />
+                        <stop offset="100%" stop-color="#0072ff" />
+                    </linearGradient>
+                </defs>
+                <circle class="monogram-circle" cx="50" cy="50" r="40" stroke="url(#monogram-grad-preloader)" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="251.2" stroke-dashoffset="251.2" />
+                <path class="monogram-path" d="M50 20 L25 75 H75 Z" stroke="url(#monogram-grad-preloader)" stroke-width="3" stroke-linejoin="round" fill="none" stroke-dasharray="200" stroke-dashoffset="200" />
+                <line class="monogram-cross" x1="37" y1="60" x2="63" y2="60" stroke="url(#monogram-grad-preloader)" stroke-width="3" stroke-dasharray="30" stroke-dashoffset="30" />
+            </svg>
+
+            <!-- Barra de Carga Neón-Azul y Porcentaje -->
+            <div class="preloader-progress-wrapper">
+                <div class="preloader-progress-bar"></div>
+            </div>
+            <div class="preloader-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Capa de Grano Cinematográfico -->
+    <div class="film-grain"></div>
+
+    <!-- Canvas de Partículas Interactivas, Cubo 3D y Estela del Cursor -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Orbe de Luz de Cursor Interactiva (Trailing Blue/Cyan Glow) -->
+    <div class="mouse-glow-orb"></div>
+
+    <!-- Rejilla Holográfica Reactiva (Scanned Radar Grid blueprint) -->
+    <div class="holographic-grid"></div>
+
+    <!-- Orbes Ambientales Flotantes Shifting -->
+    <div class="ambient-orbs-container">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+
+    <!-- BARRAS FLOTANTES LATERALES PERMANENTES -->
+    <!-- Barra Izquierda: Redes Sociales -->
+    <div class="sidebar-links left">
+        <a href="https://github.com/omaradlcrrl" target="_blank" class="sidebar-icon magnetic" data-strength="15" title="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/omar-adel-corral" target="_blank" class="sidebar-icon magnetic" data-strength="15" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <div class="sidebar-line"></div>
+    </div>
+
+    <!-- Barra Derecha: Email Vertical -->
+    <div class="sidebar-links right">
+        <a href="javascript:void(0)" class="sidebar-email magnetic" data-strength="15">omar.adel.corral@gmail.com</a>
+        <div class="sidebar-line"></div>
+    </div>
+
+    <!-- Cursor Inteligente Personalizado -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle">
+            <span class="cursor-text">VER</span>
+        </div>
+    </div>
+
+
+
+    <!-- Navegación Premium -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo magnetic" data-strength="15">
+                <!-- Monograma del Logo del Header -->
+                <svg class="oa-monogram" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="monogram-grad-header" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00f2fe" />
+                            <stop offset="100%" stop-color="#a18cd1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="40" stroke="url(#monogram-grad-header)" stroke-width="3" fill="none" />
+                    <path d="M50 20 L25 75 H75 Z" stroke="url(#monogram-grad-header)" stroke-width="3" stroke-linejoin="round" fill="none" />
+                    <line x1="37" y1="60" x2="63" y2="60" stroke="url(#monogram-grad-header)" stroke-width="3" />
+                </svg>
+                <span class="logo-text scramble-hover" data-scramble="OA">OA</span><span class="logo-dot">.</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#sobre-mi" class="nav-link magnetic scramble-hover" data-strength="20" data-scramble="SOBRE MÍ" data-i18n="nav.about" data-i18n-scramble="nav.about">Sobre Mí</a>
+                <a href="#proyectos" class="nav-link magnetic scramble-hover" data-strength="20" data-scramble="PROYECTOS" data-i18n="nav.projects" data-i18n-scramble="nav.projects">Proyectos</a>
+                <a href="#habilidades" class="nav-link magnetic scramble-hover" data-strength="20" data-scramble="HABILIDADES" data-i18n="nav.skills" data-i18n-scramble="nav.skills">Habilidades</a>
+                <a href="#experiencia" class="nav-link magnetic scramble-hover" data-strength="20" data-scramble="EXPERIENCIA" data-i18n="nav.experience" data-i18n-scramble="nav.experience">Experiencia</a>
+                <a href="#contacto" class="nav-link magnetic main-cta" data-strength="25">
+                    <span class="scramble-hover" data-scramble="HABLEMOS" data-i18n="nav.contact" data-i18n-scramble="nav.contact">Hablemos</span>
+                </a>
+                <button class="lang-toggle magnetic" data-strength="15" aria-label="Cambiar idioma">
+                    <span class="lang-current">ES</span><span class="lang-divider">/</span><span class="lang-alt">EN</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor del Portátil 3D Interactivo (Scroll-Intro) -->
+    <div id="laptop-intro-container">
+        <div class="laptop-viewport">
+            <div class="desk-3d">
+                <div class="desk-surface"></div>
+                <div class="desk-shadow"></div>
+                <div class="desk-glow"></div>
+                <!-- Patas delanteras volumétricas para que la mesa no parezca flotar -->
+                <div class="desk-leg left-leg"></div>
+                <div class="desk-leg right-leg"></div>
+            </div>
+            
+            <!-- Estructura del Portátil 3D -->
+            <div class="laptop-3d">
+                <!-- Parte inferior (Teclado y Base) -->
+                <div class="laptop-base">
+                    <div class="keyboard-area">
+                        <div class="keyboard-grid"></div>
+                    </div>
+                    <div class="trackpad"></div>
+                    <div class="base-front-edge"></div>
+                </div>
+                
+                <!-- Bisagra central -->
+                <div class="laptop-hinge"></div>
+                
+                <!-- Parte superior (Tapa y Pantalla) -->
+                <div class="laptop-screen-lid">
+                    <!-- Parte trasera de la tapa con logotipo iluminado -->
+                    <div class="laptop-screen-back">
+                        <div class="laptop-logo-back">OA</div>
+                    </div>
+                    <!-- Pantalla e interfaz interna -->
+                    <div class="laptop-screen-front">
+                        <div class="screen-glass">
+                            <!-- Reflejo brillante diagonal premium -->
+                            <div class="screen-glare"></div>
+                            
+                            <!-- Túnel de Distorsión 3D (Warp Portal) -->
+                            <div class="screen-warp-tunnel">
+                                <div class="tunnel-ring ring-1"></div>
+                                <div class="tunnel-ring ring-2"></div>
+                                <div class="tunnel-ring ring-3"></div>
+                                <div class="tunnel-ring ring-4"></div>
+                            </div>
+                            
+                            <!-- Contenido de la Pantalla / Consola Hacker -->
+                            <div class="laptop-display">
+                                <div class="terminal-boot">
+                                    <div class="terminal-header">
+                                        <span class="terminal-dot red"></span>
+                                        <span class="terminal-dot yellow"></span>
+                                        <span class="terminal-dot green"></span>
+                                        <span class="terminal-title">bash - secure_vault_init.sh</span>
+                                    </div>
+                                    <div class="terminal-body">
+                                        <div class="terminal-line">> INICIANDO PROTOCOLO DE CONEXIÓN...</div>
+                                        <div class="terminal-line">> CARGANDO NÚCLEO DE PORTFOLIO v4.5...</div>
+                                        <div class="terminal-line">> ESTABLECIENDO TÚNEL SEGURO DE DATOS... OK</div>
+                                        <div class="terminal-line">> INICIALIZANDO BÓVEDA CRIPTOGRÁFICA 3D... ACTIVA</div>
+                                        <div class="terminal-line">> SISTEMA LISTO. BIENVENIDO AL PORTFOLIO.</div>
+                                        <div class="terminal-monogram-container">
+                                            <svg class="terminal-monogram" viewBox="0 0 100 100">
+                                                <circle cx="50" cy="50" r="40" stroke="#00f2fe" stroke-width="2" fill="none" stroke-dasharray="10 5" />
+                                                <path d="M50 20 L25 75 H75 Z" stroke="#a18cd1" stroke-width="2.5" stroke-linejoin="round" fill="none" />
+                                                <line x1="37" y1="60" x2="63" y2="60" stroke="#ff0844" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <div class="terminal-line blink">> DESLIZA HACIA ABAJO PARA ENTRAR_</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Indicador de Scroll en la introducción -->
+        <div class="scroll-indicator-intro">
+            <div class="mouse-icon">
+                <span class="wheel"></span>
+            </div>
+            <span class="scroll-text">HAZ SCROLL PARA ABRIR Y ENTRAR</span>
+        </div>
+    </div>
+
+    <!-- Scroll Container (para Lenis Smooth Scroll) -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- Espaciador de scroll para controlar la animación 3D de la laptop -->
+            <div class="intro-scroll-spacer"></div>
+
+
+            <!-- SECCIÓN HERO -->
+            <section class="hero-section" id="inicio">
+                <div class="hero-container">
+                    <div class="hero-badge reveal-item">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text" data-i18n="hero.badge">Buscando primera posición Full Stack / Backend Java</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line"><span class="title-word" data-i18n="hero.title.1a">BUILDING</span> <span class="title-word text-gradient" data-i18n="hero.title.1b">HIGH-PERFORMANCE</span></span>
+                        <span class="title-line"><span class="title-word" data-i18n="hero.title.2">SYSTEMS</span></span>
+                        <span class="title-line"><span class="title-word" data-i18n="hero.title.3a">WITH</span> <span class="title-word font-italic text-outline" data-i18n="hero.title.3b">SPRING & KOTLIN</span></span>
+                    </h1>
+                    <div class="hero-footer reveal-item">
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">
+                            Construyo APIs RESTful e interfaces nativas multiplataforma sobre el ecosistema JVM (Java, Spring Boot, Kotlin). Foco en rendimiento, testing y arquitectura mantenible.
+                        </p>
+                        <a href="#proyectos" class="scroll-indicator magnetic" data-strength="15">
+                            <span class="scroll-text" data-i18n="hero.explore">Explorar</span>
+                            <div class="mouse-icon">
+                                <span class="mouse-wheel"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MARQUESINA INFINITA INTERACTIVA -->
+            <div class="marquee-wrapper reveal-item">
+                <div class="marquee-content">
+                    <span class="marquee-text">FULL STACK DEVELOPER • JAVA & SPRING BOOT • KOTLIN MULTIPLATFORM • MADRID • DAM ESIC •&nbsp;</span>
+                    <span class="marquee-text">FULL STACK DEVELOPER • JAVA & SPRING BOOT • KOTLIN MULTIPLATFORM • MADRID • DAM ESIC •&nbsp;</span>
+                    <span class="marquee-text">FULL STACK DEVELOPER • JAVA & SPRING BOOT • KOTLIN MULTIPLATFORM • MADRID • DAM ESIC •&nbsp;</span>
+                    <span class="marquee-text">FULL STACK DEVELOPER • JAVA & SPRING BOOT • KOTLIN MULTIPLATFORM • MADRID • DAM ESIC •&nbsp;</span>
+                </div>
+            </div>
+
+            <!-- SECCIÓN SOBRE MÍ (QUIÉN SOY) -->
+            <section class="about-section" id="sobre-mi">
+                <div class="section-container">
+                    <div class="about-grid">
+                        <!-- Columna Izquierda: Retrato con Marco Holográfico e Info flotante -->
+                        <div class="about-image-column">
+                            <div class="about-image-card magnetic" data-strength="8">
+                                <div class="about-scanner-overlay"></div>
+                                <div class="about-image-wrapper">
+                                    <img src="assets/profile.png" alt="Omar Adel Corral" class="about-img">
+                                    <div class="about-img-glow"></div>
+                                </div>
+                                <div class="about-cyber-corners">
+                                    <span class="corner tl"></span>
+                                    <span class="corner tr"></span>
+                                    <span class="corner bl"></span>
+                                    <span class="corner br"></span>
+                                </div>
+                                <div class="about-spec-box">
+                                    <div class="spec-row"><span class="spec-label">DEV_CLASS:</span> <span class="spec-val">FULL STACK & MOBILE</span></div>
+                                    <div class="spec-row"><span class="spec-label">SYS_LOC:</span> <span class="spec-val">MADRID, ES</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Columna Derecha: Contenido y Tarjetas de Características -->
+                        <div class="about-content-column">
+                            <div class="section-header">
+                                <div class="section-tag reveal-item" data-i18n="about.tag">/ 01. QUIÉN SOY</div>
+                                <h2 class="section-title" data-i18n="about.title">Sobre Mí</h2>
+                            </div>
+
+                            <div class="about-bio">
+                                <h3 class="about-subtitle" data-i18n="about.subtitle">Desarrollo de software robusto y escalable enfocado en el rendimiento</h3>
+                                <p class="about-text" data-i18n="about.text.1">
+                                    Soy Omar Adel Corral, desarrollador Full Stack & Mobile recién titulado en DAM (ESIC). Me especializo en el ecosistema JVM (Java, Spring Boot, Kotlin) para estructurar APIs RESTful con autenticación JWT, seguridad robusta y persistencia eficiente sobre MariaDB.
+                                </p>
+                                <p class="about-text" data-i18n="about.text.2">
+                                    En móvil apuesto por Kotlin Multiplatform y Compose Multiplatform para apps nativas Android desde una sola base de código, con arquitectura preparada para iOS. Trabajo con un proceso disciplinado donde testing (JUnit 5, Mockito), Clean Code y SOLID son la línea base, no un extra.
+                                </p>
+                            </div>
+
+                            <div class="about-tech-grid">
+                                <div class="tech-card">
+                                    <div class="tech-card-num">01 /</div>
+                                    <h4 class="tech-card-title" data-i18n="tech.01.title">Backend & APIs</h4>
+                                    <p class="tech-card-desc" data-i18n="tech.01.desc">APIs RESTful con Spring Boot y Java. Seguridad JWT, persistencia sobre MariaDB y código limpio bajo principios SOLID.</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-num">02 /</div>
+                                    <h4 class="tech-card-title" data-i18n="tech.02.title">Mobile Nativo</h4>
+                                    <p class="tech-card-desc" data-i18n="tech.02.desc">Creación de apps nativas fluidas con Kotlin Multiplatform y Android SDK para rendimiento puro.</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-num">03 /</div>
+                                    <h4 class="tech-card-title" data-i18n="tech.03.title">Clean Code & SOLID</h4>
+                                    <p class="tech-card-desc" data-i18n="tech.03.desc">Estructuración limpia orientada a componentes, patrones de diseño modulares y testing exhaustivo.</p>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-num">04 /</div>
+                                    <h4 class="tech-card-title" data-i18n="tech.04.title">Rendimiento</h4>
+                                    <p class="tech-card-desc" data-i18n="tech.04.desc">Indexación SQL, rate limiting por IP con Caffeine y diseño orientado a un backend estable y eficiente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN PROYECTOS -->
+            <section class="projects-section" id="proyectos">
+                <div class="section-container">
+                    <div class="section-header">
+                        <div class="section-tag reveal-item" data-i18n="projects.tag">/ SELECCIÓN DE TRABAJOS</div>
+                        <h2 class="section-title reveal-text" data-i18n="projects.title">Proyectos Destacados</h2>
+                    </div>
+
+                    <!-- Layout split: Tarjetas a la izquierda y Consola de Depuración fija a la derecha -->
+                    <div class="projects-split-layout">
+                        <!-- Lado Izquierdo: Las Tarjetas de Proyectos -->
+                        <div class="projects-list">
+                            <!-- Proyecto 1 (Fit-Win) -->
+                            <div class="project-card reveal-card" data-cursor-style="view" data-project-id="fitwin">
+                                <div class="project-img-container">
+                                    <div class="project-img-wrapper">
+                                        <img src="assets/project1.png" alt="Proyecto Fit-Win" class="project-img">
+                                    </div>
+                                    <div class="project-overlay"></div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-meta">
+                                        <span class="project-category">Spring Boot / Kotlin Multiplatform / Ktor</span>
+                                        <span class="project-year">2026</span>
+                                    </div>
+                                    <h3 class="project-name">FIT-WIN / Ecosistema Fitness Full Stack</h3>
+                                    <div class="project-line"></div>
+                                </div>
+                                <div class="card-glow"></div>
+                            </div>
+
+                            <!-- Proyecto 2 (Car-Finder) -->
+                            <div class="project-card reveal-card" data-cursor-style="view" data-project-id="carfinder">
+                                <div class="project-img-container">
+                                    <div class="project-img-wrapper">
+                                        <img src="assets/project2.png" alt="Proyecto Car-Finder" class="project-img">
+                                    </div>
+                                    <div class="project-overlay"></div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-meta">
+                                        <span class="project-category">Python / SQLite / Telegram Bot API</span>
+                                        <span class="project-year">2026</span>
+                                    </div>
+                                    <h3 class="project-name">CAR-FINDER / Scraper de Vehículos</h3>
+                                    <div class="project-line"></div>
+                                </div>
+                                <div class="card-glow"></div>
+                            </div>
+
+                            <!-- Proyecto 3 (LifeRPG) -->
+                            <div class="project-card reveal-card" data-cursor-style="view" data-project-id="liferpg">
+                                <div class="project-img-container">
+                                    <div class="project-img-wrapper">
+                                        <img src="assets/project3.png" alt="Proyecto LifeRPG" class="project-img">
+                                    </div>
+                                    <div class="project-overlay"></div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="project-meta">
+                                        <span class="project-category">Kotlin / Jetpack Compose / Room DB</span>
+                                        <span class="project-year">2025</span>
+                                    </div>
+                                    <h3 class="project-name">LIFERPG / Gamificación & Hábitos</h3>
+                                    <div class="project-line"></div>
+                                </div>
+                                <div class="card-glow"></div>
+                            </div>
+                        </div>
+
+                        <!-- Lado Derecho: La Consola de Depuración Fija (Sticky Terminal Debugger) -->
+                        <div class="terminal-sticky-wrapper">
+                            <div class="terminal-container-panel reveal-card">
+                                <div class="terminal-header-bar">
+                                    <div class="terminal-dots">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                    </div>
+                                    <div class="terminal-tab-title">Console Debugger v1.0.4 - omar@server</div>
+                                </div>
+                                <div class="terminal-body-content">
+                                    <div class="terminal-log-row system-startup">
+                                        <span class="log-timestamp">[21:57:33]</span>
+                                        <span class="log-tag">[SYSTEM]</span>
+                                        <span class="log-text">Listening for user connection on omaradlcrrl/portfolio...</span>
+                                    </div>
+                                    <div class="terminal-log-row system-ready">
+                                        <span class="log-timestamp">[21:57:34]</span>
+                                        <span class="log-tag">[READY]</span>
+                                        <span class="log-text">Hover on a project card to inspect the technical server trace_</span>
+                                    </div>
+                                    <!-- Log typing stream dynamically injected by main.js -->
+                                    <div id="terminal-stream-injection"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN HABILIDADES (Stack con Logos Oficiales Multi-Color) -->
+            <section class="skills-section" id="habilidades">
+                <canvas id="skills-blackhole-canvas"></canvas>
+                <div class="section-container">
+                    <div class="section-header">
+                        <div class="section-tag reveal-item" data-i18n="skills.tag">/ ARQUITECTURA TECNOLÓGICA</div>
+                        <h2 class="section-title reveal-text" data-i18n="skills.title">Mi Stack</h2>
+                    </div>
+
+                    <div class="pyramid-container reveal-card">
+                        <!-- FILA 1 (Cúspide - 1 Item: Java) -->
+                        <div class="pyramid-row row-1">
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 24 24" width="42" height="42">
+                                    <path fill="#5382A1" d="M1.77 15.65c.57.85 2.12 1.34 3.75 1.34 2.65 0 4.96-1.28 5.6-3.05H1.4c.1 0 .26.85.37 1.71zm9.21-4.7c-.55.05-1.12.1-1.68.17-.67.09-1.34.2-2 .37a13.3 13.3 0 00-4 .93h8.3a4.06 4.06 0 01-.62-1.47zM.5 18h11c.3 0 .5-.2.5-.5s-.2-.5-.5-.5H.5c-.3 0-.5.2-.5.5s.2.5.5.5zm11.75-5.63a7.48 7.48 0 00-3.69-.9c-.66 0-1.32.07-1.97.2a15.7 15.7 0 00-4 .87h8.86a4.2 4.2 0 01.8-1.74v1.57z"/>
+                                    <path fill="#E67E22" d="M12.5 7.5c-.85 0-1.5-.7-1.5-1.5s.65-1.5 1.5-1.5S14 5.2 14 6s-.65 1.5-1.5 1.5zm-3-1c-.85 0-1.5-.7-1.5-1.5s.65-1.5 1.5-1.5S11 4.2 11 5s-.65 1.5-1.5 1.5zm6 1c-.85 0-1.5-.7-1.5-1.5s.65-1.5 1.5-1.5S17 5.2 17 6s-.65 1.5-1.5 1.5z"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="JAVA">Java</span>
+                            </div>
+                        </div>
+
+                        <!-- FILA 2 (2 Items: Kotlin + Spring Boot) -->
+                        <div class="pyramid-row row-2">
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 24 24" width="42" height="42">
+                                    <defs>
+                                        <linearGradient id="kotlin-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#E17224" />
+                                            <stop offset="30%" stop-color="#C757BC" />
+                                            <stop offset="100%" stop-color="#7F52FF" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#kotlin-gradient)" d="M24 24H0V0h24L12 12z"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="KOTLIN">Kotlin</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 128 128" width="42" height="42">
+                                    <path d="M116.452 6.643a59.104 59.104 0 01-6.837 12.136A64.249 64.249 0 0064.205-.026C28.984-.026 0 28.982 0 64.242a64.316 64.316 0 0019.945 46.562l2.368 2.1a64.22 64.22 0 0041.358 15.122c33.487 0 61.637-26.24 64.021-59.683 1.751-16.371-3.051-37.077-11.24-61.7zM29.067 111.17a5.5 5.5 0 01-4.269 2.034c-3.018 0-5.487-2.484-5.487-5.502 0-3.017 2.485-5.501 5.487-5.501 1.25 0 2.485.433 3.452 1.234 2.351 1.9 2.718 5.384.817 7.735zm87.119-19.238c-15.843 21.122-49.68 14.003-71.376 15.02 0 0-3.852.234-7.721.867 0 0 1.45-.617 3.335-1.334 15.226-5.301 22.43-6.335 31.685-11.086 17.427-8.869 34.654-28.274 38.24-48.463-6.637 19.422-26.75 36.11-45.077 42.895-12.557 4.635-35.238 9.136-35.238 9.136l-.917-.484c-15.442-7.518-15.91-40.977 12.157-51.78 12.291-4.735 24.048-2.134 37.323-5.302 14.175-3.367 30.568-14.004 37.238-27.874 7.471 22.19 16.46 56.932.35 78.405z" fill="#77bc1f"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="SPRING BOOT">Spring Boot</span>
+                            </div>
+                        </div>
+
+                        <!-- FILA 3 (3 Items: KMP, APIs RESTful, MariaDB) -->
+                        <div class="pyramid-row row-3">
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 48 48" width="42" height="42">
+                                    <defs>
+                                        <linearGradient id="kmp-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#E17224" />
+                                            <stop offset="30%" stop-color="#C757BC" />
+                                            <stop offset="100%" stop-color="#7F52FF" />
+                                        </linearGradient>
+                                    </defs>
+                                    <rect x="4" y="4" width="22" height="22" rx="3" fill="url(#kmp-gradient)" opacity="0.85"/>
+                                    <rect x="22" y="22" width="22" height="22" rx="3" fill="url(#kmp-gradient)"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="KOTLIN MULTIPLATFORM">Kotlin Multiplatform</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 24 24" width="42" height="42">
+                                    <defs>
+                                        <linearGradient id="api-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#00f2fe" />
+                                            <stop offset="100%" stop-color="#a18cd1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <rect x="2" y="2" width="6" height="6" rx="1.5" fill="url(#api-gradient)" />
+                                    <rect x="16" y="2" width="6" height="6" rx="1.5" fill="url(#api-gradient)" />
+                                    <rect x="9" y="14" width="6" height="6" rx="1.5" fill="url(#api-gradient)" />
+                                    <path d="M5 8v4h4M19 8v4h-4M12 14v-2" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="APIS RESTFUL">APIs RESTful</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 24 24" width="42" height="42">
+                                    <defs>
+                                        <linearGradient id="mariadb-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#003545" />
+                                            <stop offset="100%" stop-color="#C0765A" />
+                                        </linearGradient>
+                                    </defs>
+                                    <ellipse cx="12" cy="5" rx="8" ry="2.5" fill="url(#mariadb-gradient)"/>
+                                    <path d="M4 5v6c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5V5" fill="none" stroke="url(#mariadb-gradient)" stroke-width="1.8"/>
+                                    <path d="M4 11v6c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5v-6" fill="none" stroke="url(#mariadb-gradient)" stroke-width="1.8"/>
+                                    <ellipse cx="12" cy="11" rx="8" ry="2.5" fill="none" stroke="url(#mariadb-gradient)" stroke-width="1.5"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="MARIADB / SQL">MariaDB / SQL</span>
+                            </div>
+                        </div>
+
+                        <!-- FILA 4 (4 Items: Compose Multi, Ktor Client, Docker, Power BI) -->
+                        <div class="pyramid-row row-4">
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 128 128" width="42" height="42">
+                                    <path d="M41.226 76.778a4.002 4.002 0 0 1-.47-1.29c.09.452.25.887.47 1.29zm.578.713c.222.22.472.411.749.548l18.88 10.565-18.88-10.565a2.899 2.899 0 0 1-.747-.548z" fill="#083042"/>
+                                    <path d="M64.342 101.967h-.14a8.301 8.301 0 0 1-4.014-1.016l-28.182-15.75c-1.663-.932-2.686-2.66-2.686-4.527V48.628c0-1.373.249-2.69.83-3.842L8.114 32.522c-.913 1.92-1.383 4.088-1.356 6.366v52.927a8.675 8.675 0 0 0 4.458 7.49l46.481 26.012c2.05 1.152 4.347 1.701 6.617 1.701v-.027c.055-3.32.028-16.628.028-25.023z" fill="#083042"/>
+                                    <path d="m86.46 50.6-.167-.246c-.138-.192-.275-.357-.413-.548.138.164.275.356.413.547a.973.973 0 0 1 .167.247zM63.262 37.76c.14 0 .251-.027.39-.027-.139.027-.278.027-.39.027z" fill="#3ddb85"/>
+                                    <path d="M30.122 44.757a7.214 7.214 0 0 1 2.825-3.072l26.52-15.503a8.065 8.065 0 0 1 8.03-.082l26.798 15.009a8.993 8.993 0 0 1 3.018 2.743L118.99 31.04a14.913 14.913 0 0 0-4.955-4.5L69.766 1.764a13.32 13.32 0 0 0-13.233.137L12.765 27.472a11.704 11.704 0 0 0-4.651 5.049l22.009 12.236z" fill="#3ddc84"/>
+                                    <path d="M62.157 37.983c.057-.028.114-.028.17-.056-.056.028-.113.028-.17.056zm-20.88 12.949c.056-.11.111-.22.168-.3-.057.109-.111.19-.168.3l-.082.246z" fill="#3ddb85"/>
+                                    <path d="M118.962 31.04 97.285 43.852c.83 1.207 1.329 2.633 1.355 4.089v30.51a7.881 7.881 0 0 1-3.93 6.914L68.188 100.87a8.07 8.07 0 0 1-3.849 1.097c.029 8.369.029 21.677-.027 24.997v.027a13.533 13.533 0 0 0 6.617-1.812l43.769-25.599c4.07-2.387 6.562-6.723 6.506-11.415V37.817c-.028-2.442-.858-4.774-2.242-6.777z" fill="#4285f4"/>
+                                    <path d="M86.963 75.187c-.028.056-.028.111-.056.168a.387.387 0 0 0 .056-.168zm-.278-24.227c-.057-.138-.14-.248-.223-.385.083.137.166.275.222.385zM66.807 88.576 84.58 78.178c.111-.054.195-.138.306-.192-.111.054-.195.138-.306.192l-17.773 10.4zM86.74 75.818c-.056.138-.139.275-.196.413.057-.165.112-.303.196-.413z" fill="#4285f4"/>
+                                    <path d="M41.198 51.178a5.508 5.508 0 0 0-.415 1.675c-.028.218-.028.438-.028.686v21.483c0 .164 0 .302.028.467.056.465.222.905.47 1.29.167.274.36.492.555.712.222.22.47.411.746.55l18.882 10.563a5.49 5.49 0 0 0 2.684.685h.195a5.155 5.155 0 0 0 2.492-.74L84.58 78.15c.111-.055.194-.138.305-.192.194-.137.388-.275.554-.44.26-.236.501-.492.719-.768.138-.192.277-.383.388-.576.082-.136.139-.274.193-.412.056-.135.14-.301.195-.465.027-.056.027-.111.055-.165a5.403 5.403 0 0 0 .249-1.647V53.044c0-.383-.056-.74-.138-1.096-.055-.248-.14-.468-.222-.688l-.166-.328c-.055-.138-.14-.468-.222-.688l-.166-.328c-.055-.138-.14-.247-.222-.385l-.166-.246c-.138-.193-.277-.357-.415-.549a5.607 5.607 0 0 0-1.606-1.29L66.337 38.394a6.145 6.145 0 0 0-.97-.44 5.86 5.86 0 0 0-1.385-.246h-.36c-.137 0-.248 0-.386.026a5.658 5.658 0 0 0-.942.165c-.055.027-.11.027-.166.056-.415.11-.803.301-1.191.52l-17.773 10.4a4.548 4.548 0 0 0-1.33 1.18c-.137.192-.276.384-.387.576-.055.11-.11.192-.166.302l-.083.246Z" fill="#d6f0ff"/>
+                                    <path d="M64.312 89.288h-.194a5.512 5.512 0 0 1-2.686-.684L42.552 78.04a3.737 3.737 0 0 1-.748-.549 3.31 3.31 0 0 1-.554-.714 3.998 3.998 0 0 1-.47-1.29c-.029-.163-.029-.301-.029-.465V53.537c0-.219 0-.465.029-.686.053-.575.192-1.14.415-1.674L36.1 48.078l-5.98-3.32c-.554 1.152-.83 2.468-.83 3.841v32.047a5.322 5.322 0 0 0 2.685 4.528l28.157 15.776a8.023 8.023 0 0 0 4.014 1.016h.14c0-4.089-.029-6.997-.029-6.997l.055-5.68z" fill="#083042"/>
+                                    <path d="M64.312 89.288h-.194a5.512 5.512 0 0 1-2.686-.684L42.552 78.04a3.737 3.737 0 0 1-.748-.549 3.31 3.31 0 0 1-.554-.714 3.998 3.998 0 0 1-.47-1.29c-.029-.163-.029-.301-.029-.465V53.537c0-.219 0-.465.029-.686.053-.575.192-1.14.415-1.674L36.1 48.078l-5.98-3.32c-.554 1.152-.83 2.468-.83 3.841v32.047a5.322 5.322 0 0 0 2.685 4.528l28.157 15.776a8.023 8.023 0 0 0 4.014 1.016h.14c0-4.089-.029-6.997-.029-6.997l.055-5.68z" fill="#041619"/>
+                                    <path d="m94.266 41.109-26.799-15.01a8.066 8.066 0 0 0-8.029.083l-26.52 15.504a7.049 7.049 0 0 0-2.826 3.073l6.01 3.32 5.093 3.099.082-.246c.056-.111.111-.22.166-.302.111-.192.25-.384.388-.576.36-.467.803-.85 1.33-1.18l17.772-10.4c.38-.213.777-.387 1.191-.52.056-.027.111-.027.166-.056.308-.084.623-.138.941-.164.138 0 .249-.028.388-.028h.36c.469.03.933.111 1.384.246.34.108.665.255.969.441l17.966 10.07a5.99 5.99 0 0 1 1.608 1.289c.137.164.277.357.414.548l.167.246 4.595-3.044 6.229-3.704c-.803-1.071-1.827-2.032-3.045-2.69z" fill="#3ddb85"/>
+                                    <path d="m94.266 41.109-26.799-15.01a8.066 8.066 0 0 0-8.029.083l-26.52 15.504a7.049 7.049 0 0 0-2.826 3.073l6.01 3.32 5.093 3.099.082-.246c.056-.111.111-.22.166-.302.111-.192.25-.384.388-.576.36-.467.803-.85 1.33-1.18l17.772-10.4c.38-.213.777-.387 1.191-.52.056-.027.111-.027.166-.056.308-.084.623-.138.941-.164.138 0 .249-.028.388-.028h.36c.469.03.933.111 1.384.246.34.108.665.255.969.441l17.966 10.07a5.99 5.99 0 0 1 1.608 1.289c.137.164.277.357.414.548l.167.246 4.595-3.044 6.229-3.704c-.803-1.071-1.827-2.032-3.045-2.69z" fill="#37bf6e"/>
+                                    <path d="M86.46 50.602c.083.136.139.246.221.384l.167.329a4.783 4.783 0 0 1 .36 1.783V73.54a5.414 5.414 0 0 1-.25 1.646c-.027.054-.027.11-.055.164a3.423 3.423 0 0 1-.193.468c-.057.135-.14.273-.195.41-.11.193-.249.384-.388.577a6.243 6.243 0 0 1-.719.767c-.166.165-.36.302-.554.44-.111.054-.193.137-.304.192L66.776 88.602a5.841 5.841 0 0 1-2.492.742v5.679s0 2.909.028 6.997a7.785 7.785 0 0 0 3.849-1.097l26.52-15.504c2.465-1.453 3.96-4.088 3.932-6.913V47.995c-.027-1.482-.525-2.882-1.355-4.089l-6.231 3.705z" fill="#4285f4"/>
+                                    <path d="M86.46 50.602c.083.136.139.246.221.384l.167.329a4.783 4.783 0 0 1 .36 1.783V73.54a5.414 5.414 0 0 1-.25 1.646c-.027.054-.027.11-.055.164a3.423 3.423 0 0 1-.193.468c-.057.135-.14.273-.195.41-.11.193-.249.384-.388.577a6.243 6.243 0 0 1-.719.767c-.166.165-.36.302-.554.44-.111.054-.193.137-.304.192L66.776 88.602a5.841 5.841 0 0 1-2.492.742v5.679s0 2.909.028 6.997a7.785 7.785 0 0 0 3.849-1.097l26.52-15.504c2.465-1.453 3.96-4.088 3.932-6.913V47.995c-.027-1.482-.525-2.882-1.355-4.089l-6.231 3.705z" fill="#3870b2"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="COMPOSE MULTIPLATFORM">Compose Multiplatform</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 128 128" width="42" height="42">
+                                    <defs>
+                                        <linearGradient id="ktor-grad-a" x1="24.941" x2="52.306" y1="24.941" y2="52.306" gradientTransform="rotate(.104) scale(1.21905)" gradientUnits="userSpaceOnUse">
+                                            <stop offset=".296" stop-color="#00afff"/>
+                                            <stop offset=".694" stop-color="#5282ff"/>
+                                            <stop offset="1" stop-color="#945dff"/>
+                                        </linearGradient>
+                                        <linearGradient id="ktor-grad-b" x1="53.151" x2="79.023" y1="53.151" y2="79.023" gradientTransform="rotate(.104) scale(1.21905)" gradientUnits="userSpaceOnUse">
+                                            <stop offset=".108" stop-color="#c757bc"/>
+                                            <stop offset=".173" stop-color="#cd5ca9"/>
+                                            <stop offset=".492" stop-color="#e8744f"/>
+                                            <stop offset=".716" stop-color="#f88316"/>
+                                            <stop offset=".823" stop-color="#ff8900"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#ktor-grad-a)" d="M80.457 47.543 47.543 14.629 14.629 47.543l32.914 32.914Zm0 0"/>
+                                    <path fill="url(#ktor-grad-b)" d="m47.543 80.457 32.914 32.914 32.914-32.914-32.914-32.914Zm0 0"/>
+                                    <path fill="#ffffff" fill-opacity="0.1" d="M80.457 47.543H47.543v32.914h32.914Zm0 0"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="KTOR CLIENT">Ktor Client</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 128 128" width="42" height="42">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#3A4D54" d="M73.8 50.8h11.3v11.5h5.7c2.6 0 5.3-.5 7.8-1.3 1.2-.4 2.6-1 3.8-1.7-1.6-2.1-2.4-4.7-2.6-7.3-.3-3.5.4-8.1 2.8-10.8l1.2-1.4 1.4 1.1c3.6 2.9 6.5 6.8 7.1 11.4 4.3-1.3 9.3-1 13.1 1.2l1.5.9-.8 1.6c-3.2 6.2-9.9 8.2-16.4 7.8-9.8 24.3-31 35.8-56.8 35.8-13.3 0-25.5-5-32.5-16.8l-.1-.2-1-2.1c-2.4-5.2-3.1-10.9-2.6-16.6l.2-1.7h9.6V50.8h11.3V39.6h22.5V28.3h13.5v22.5z"/>
+                                    <path fill="#00AADA" d="M110.4 55.1c.8-5.9-3.6-10.5-6.4-12.7-3.1 3.6-3.6 13.2 1.3 17.2-2.8 2.4-8.5 4.7-14.5 4.7H18.6c-.6 6.2.5 11.9 3 16.8l.8 1.5c.5.9 1.1 1.7 1.7 2.6 3 .2 5.7.3 8.2.2 4.9-.1 8.9-.7 12-1.7.5-.2.9.1 1.1.5.2.5-.1.9-.5 1.1-.4.1-.8.3-1.3.4-2.4.7-5 1.1-8.3 1.3h-.6c-1.3.1-2.7.1-4.2.1-1.6 0-3.1 0-4.9-.1 6 6.8 15.4 10.8 27.2 10.8 25 0 46.2-11.1 55.5-35.9 6.7.7 13.1-1 16-6.7-4.5-2.7-10.5-1.8-13.9-.1z"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="DOCKER">Docker</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 24 24" width="42" height="42">
+                                    <defs>
+                                        <linearGradient id="pbi-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#E29F00" />
+                                            <stop offset="100%" stop-color="#F2C811" />
+                                        </linearGradient>
+                                        <linearGradient id="pbi-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#F2C811" />
+                                            <stop offset="100%" stop-color="#FFF176" />
+                                        </linearGradient>
+                                    </defs>
+                                    <rect x="3" y="13" width="5" height="7" rx="1" fill="#E29F00" />
+                                    <rect x="9.5" y="7" width="5" height="13" rx="1" fill="url(#pbi-grad-1)" />
+                                    <rect x="16" y="2" width="5" height="18" rx="1" fill="url(#pbi-grad-2)" />
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="POWER BI">Power BI</span>
+                            </div>
+                        </div>
+
+                        <!-- FILA 5 (Base - 5 Items: JS, Python, JavaFX (demoted), Figma, Git) -->
+                        <div class="pyramid-row row-5">
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 128 128" width="42" height="42">
+                                    <linearGradient id="python-grad-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient>
+                                    <linearGradient id="python-grad-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient>
+                                    <path fill="url(#python-grad-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"/>
+                                    <path fill="url(#python-grad-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="PYTHON">Python</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 128 128" width="42" height="42">
+                                    <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/>
+                                    <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="JAVASCRIPT">JavaScript</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 32 32" width="42" height="42">
+                                    <path fill="#231F20" d="M16 2.047c-2.484 0-4.912 1.706-5.875 4.109-.844 2.106-.575 4.316-.575 6.419 0 .428-.009.847-.025 1.259-.091 2.306-.991 4.706-2.584 6.347-1.119 1.156-2.616 1.819-3.95 2.859-.722.563-1.072 1.488-.853 2.378.259 1.053 1.259 1.847 2.325 1.822.45-.009.897-.109 1.328-.278 1.459-.575 3.328-.316 4.781.334 1.722.772 3.447 1.706 5.422 1.706h3.422c1.975 0 3.7-.934 5.422-1.706 1.453-.65 3.322-.909 4.781-.334.431.169.878.269 1.328.278 1.066.025 2.066-.769 2.325-1.822.219-.891-.131-1.816-.853-2.378-1.334-1.041-2.831-1.703-3.95-2.859-1.594-1.641-2.494-4.041-2.584-6.347-.016-.412-.025-.831-.025-1.259 0-2.103.269-4.312-.575-6.419C20.912 3.753 18.484 2.047 16 2.047z"/>
+                                    <path fill="#FFFFFF" d="M16 10.375c-3.153 0-5.834 2.766-5.834 6.781 0 2.219 1.128 4.412 2.656 5.459 1 .684 2.112.981 3.178.981s2.178-.297 3.178-.981c1.528-1.047 2.656-3.241 2.656-5.459 0-4.016-2.681-6.781-5.834-6.781z"/>
+                                    <path fill="#E3A712" d="M16 22c-1.656 0-3 1.344-3 3s1.344 3 3 3 3-1.344 3-3-1.344-3-3-3z"/>
+                                    <path fill="#231F20" d="M13.5 14.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm5 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                    <circle fill="#FFFFFF" cx="13" cy="12.5" r="1"/>
+                                    <circle fill="#FFFFFF" cx="18" cy="12.5" r="1"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="LINUX">Linux</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 128 128" width="42" height="42">
+                                    <!-- Figma Multicolores Oficial -->
+                                    <path fill="#f24e1e" d="M24 21.5C24 9.6 33.6 0 45.5 0H67v43H45.5C33.6 43 24 33.4 24 21.5zm0 0"/>
+                                    <path fill="#ff7262" d="M67 0h21.5C100.4 0 110 9.6 110 21.5S100.4 43 88.5 43H67zm0 0"/>
+                                    <path fill="#a259ff" d="M24 64.5C24 52.6 33.6 43 45.5 43H67v43H45.5C33.6 86 24 76.4 24 64.5zm0 0"/>
+                                    <path fill="#1abcfe" d="M110 64.5c0 11.9-9.6 21.5-21.5 21.5S67 76.4 67 64.5 76.6 43 88.5 43 110 52.6 110 64.5zm0 0"/>
+                                    <path fill="#0acf83" d="M45.5 129c11.9 0 21.5-9.6 21.5-21.5V86H45.5C33.6 86 24 95.6 24 107.5S33.6 129 45.5 129zm0 0"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="FIGMA">Figma</span>
+                            </div>
+                            <div class="pyramid-cell magnetic" data-strength="15">
+                                <svg class="skill-icon" viewBox="0 0 128 128" width="42" height="42">
+                                    <!-- Git Naranja Oficial -->
+                                    <path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"/>
+                                </svg>
+                                <span class="skill-name scramble-hover" data-scramble="GIT / GITHUB">Git / GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN EXPERIENCIA -->
+            <section class="experience-section" id="experiencia">
+                <div class="section-container">
+                    <div class="section-header">
+                        <div class="section-tag reveal-item" data-i18n="exp.tag">/ TRAYECTORIA Y EDUCACIÓN</div>
+                        <h2 class="section-title reveal-text" data-i18n="exp.title">Experiencia & Educación</h2>
+                    </div>
+
+                    <div class="timeline-container">
+                        <!-- Línea de Conexión Scroll-Trigger -->
+                        <div class="timeline-progress-line"></div>
+
+
+
+                        <!-- Item 2 (Trabajo Destaka) -->
+                        <div class="timeline-item reveal-card">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date" data-i18n="exp.destaka.date">Mar 2024 - Jul 2024</div>
+                            <div class="timeline-content glass-card">
+                                <h3 class="timeline-role" data-i18n="exp.destaka.role">Desarrollador Full Stack (Remoto)</h3>
+                                <h4 class="timeline-company" data-i18n="exp.destaka.company">Destaka Marketing</h4>
+                                <p class="timeline-desc" data-i18n="exp.destaka.desc">
+                                    Diseño de prototipos de aplicaciones móviles en Figma para clientes. Desarrollo e implementación de APIs RESTful con Java y Spring Boot. Mantenimiento y optimización de rendimiento del frontend corporativo (JavaScript y WordPress).
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 (Educación) -->
+                        <div class="timeline-item reveal-card">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date" data-i18n="exp.dam.date">Oct 2022 - Ene 2026</div>
+                            <div class="timeline-content glass-card">
+                                <h3 class="timeline-role" data-i18n="exp.dam.role">Técnico Superior DAM</h3>
+                                <h4 class="timeline-company" data-i18n="exp.dam.company">ESIC Business & Marketing School</h4>
+                                <p class="timeline-desc" data-i18n="exp.dam.desc">
+                                    Titulado en Desarrollo de Aplicaciones Multiplataforma (DAM). Especialización en Data Analytics: visualización con Power BI, análisis con Excel y gestión de bases de datos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOQUE CERTIFICACIONES -->
+                    <div class="extras-block certifications-block reveal-card">
+                        <h3 class="extras-heading" data-i18n="certs.heading">/ CERTIFICACIONES</h3>
+                        <div class="extras-list">
+                            <div class="extras-item">
+                                <span class="extras-date" data-i18n="certs.cyber.date">Mayo 2026</span>
+                                <div class="extras-text">
+                                    <h4 class="extras-name" data-i18n="certs.cyber.name">Google Cybersecurity Certificate</h4>
+                                    <span class="extras-issuer" data-i18n="certs.cyber.issuer">Coursera · Fundamentos de ciberseguridad, redes, Linux, SIEM y automatización con Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOQUE IDIOMAS -->
+                    <div class="extras-block languages-block reveal-card">
+                        <h3 class="extras-heading" data-i18n="lang.heading">/ IDIOMAS</h3>
+                        <div class="extras-list">
+                            <div class="extras-item">
+                                <span class="extras-date" data-i18n="lang.es.name">Español</span>
+                                <div class="extras-text">
+                                    <h4 class="extras-name" data-i18n="lang.es.level">Nativo</h4>
+                                </div>
+                            </div>
+                            <div class="extras-item">
+                                <span class="extras-date" data-i18n="lang.en.name">Inglés</span>
+                                <div class="extras-text">
+                                    <h4 class="extras-name" data-i18n="lang.en.level">B2 — First Certificate</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN CONTACTO -->
+            <section class="contact-section" id="contacto">
+                <div class="section-container">
+                    <div class="contact-header">
+                        <div class="section-tag reveal-item" data-i18n="contact.tag">/ ¿TIENES UNA IDEA EXTRAORDINARIA?</div>
+                        <h2 class="contact-title">
+                            <span class="contact-line reveal-text" data-i18n="contact.line1">Creemos algo</span>
+                            <span class="contact-line reveal-text text-gradient font-italic" data-i18n="contact.line2">inolvidable</span>
+                        </h2>
+                    </div>
+
+                    <div class="contact-body">
+                        <div class="contact-cta-wrapper reveal-item">
+                            <a href="javascript:void(0)" class="contact-large-btn magnetic" data-strength="40">
+                                <span class="btn-text scramble-hover" data-scramble="omar.adel.corral@gmail.com">omar.adel.corral@gmail.com</span>
+                                <div class="btn-circle-fill"></div>
+                            </a>
+                            <a href="assets/cv.pdf" download class="contact-cv-btn magnetic" data-strength="25">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                <span data-i18n="contact.cv">Descargar CV (PDF)</span>
+                            </a>
+                        </div>
+
+                        <div class="contact-info-grid reveal-item">
+                            <div class="info-block">
+                                <h4 class="info-label" data-i18n="contact.social">Redes Sociales</h4>
+                                <div class="social-links">
+                                    <a href="https://linkedin.com/in/omar-adel-corral" target="_blank" class="social-link magnetic" data-strength="15">LinkedIn</a>
+                                    <a href="https://github.com/omaradlcrrl" target="_blank" class="social-link magnetic" data-strength="15">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <h4 class="info-label" data-i18n="contact.location">Ubicación y Hora</h4>
+                                <p class="info-val" data-i18n="contact.location.val">Madrid, España / UTC+2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="main-footer">
+                <div class="footer-container">
+                    <p class="copyright" data-i18n="footer.copyright">© 2026 Omar Adel Corral.</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Futuristic Slide-In Project Inspect Drawer -->
+    <div id="project-inspect-drawer">
+        <div class="drawer-backdrop"></div>
+        <div class="drawer-panel">
+            <button class="drawer-close-btn magnetic" data-strength="15" title="Cerrar Panel">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="drawer-scroll-content">
+                <div class="drawer-header">
+                    <span class="drawer-tag" id="drawer-project-tag">SPRING BOOT / KOTLIN MULTIPLATFORM</span>
+                    <h2 class="drawer-title" id="drawer-project-title">FIT-WIN</h2>
+                </div>
+                <div class="drawer-body">
+                    <div class="drawer-meta-grid">
+                        <div class="meta-item">
+                            <span class="meta-label">Año</span>
+                            <span class="meta-val" id="drawer-project-year">2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Rol del Servidor</span>
+                            <span class="meta-val">Full Stack Developer</span>
+                        </div>
+                    </div>
+                    <div class="drawer-description" id="drawer-project-desc">
+                        Detalles del proyecto...
+                    </div>
+                    
+                    <div class="drawer-code-section">
+                        <h4 class="code-title">// INSPECCIÓN DE ARCHIVOS DEL SERVIDOR</h4>
+                        <div class="code-window">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-filename" id="drawer-project-filename">HandshakeController.kt</span>
+                            </div>
+                            <pre><code class="language-code" id="drawer-project-code">
+// Código cargado dinámicamente...
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CDNs de Animación y Scroll Suave -->
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis Scroll Suave -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/particles.js?v=4.8"></script>
+    <script src="js/main.js?v=4.8"></script>
+    <script src="js/animations.js?v=4.8"></script>
+</body>
+</html>
